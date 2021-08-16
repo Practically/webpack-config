@@ -1,0 +1,38 @@
+name: CI
+on: [push]
+jobs:
+  commits:
+    name: Commitlint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1000
+
+      - name: Lint commits
+        uses: docker://registry.k1.zportal.co.uk/practically-oss/conventional-tools:0.x
+        with:
+          args: conventional-tools commitlint -l1
+
+  test:
+    name: Test Node ${{ matrix.node-versions }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-versions: ['12', '14', '16']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-versions }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run tests
+        run: yarn test
