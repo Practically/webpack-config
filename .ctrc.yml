@@ -3,9 +3,9 @@ git:
   project: Practically/webpack-config
 hooks:
   commit-msg:
-    - conventional-tools commitlint -f HEAD~5
+    - conventional-tools commitlint
   pre-push:
-    - conventional-tools commitlint -l1 -f HEAD~10
+    - conventional-tools commitlint -l1
   prepare-commit-msg:
     - |
         # Commitgen
