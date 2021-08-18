@@ -94,13 +94,7 @@ const initialize = _config => {
      */
     loaders.push({
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-        loader: 'url-loader',
-        options: {
-            limit: 10000,
-            name: config.production
-                ? 'media/[name].[hash:8].[ext]'
-                : 'media/[name].[ext]',
-        },
+        type: 'asset',
     });
 
     /**
@@ -356,11 +350,8 @@ const build = () => {
      * Add all the loader into a `oneOf` loader
      */
     loaders.push({
-        loader: require.resolve('file-loader'),
         exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
-        options: {
-            name: 'media/[name].[hash:8].[ext]',
-        },
+        type: 'asset',
     });
 
     /**
