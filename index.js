@@ -35,9 +35,11 @@ const baseOptions = {
     public_path: '/',
     production: process.env.NODE_ENV === 'production',
     devServer: {
-        contentBase: path.join(process.cwd(), 'public'),
+        static: {
+            directory: path.join(process.cwd(), 'public'),
+            watch: true,
+        },
         historyApiFallback: true,
-        compress: true,
         port: 9000,
     },
 };
@@ -116,6 +118,7 @@ const initialize = _config => {
         context: config.src_path,
         entry: config.entry_point,
         stats: !isWatch,
+		infrastructureLogging: {stream: process.stdout},
         output: {
             path: config.dest_path,
             filename: config.production
