@@ -54,7 +54,7 @@ test('Test the webpack dev server runs', async () => {
             const server = spawn(exe, ['serve']);
 
             server.stdout.on('data', data => {
-                if (/Compiled successfully./.test(data)) {
+                if (/compiled/.test(data) && /successfully/.test(data)) {
                     reslove(server);
                 }
             });
