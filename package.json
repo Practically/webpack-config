@@ -40,7 +40,7 @@
         "webpack-manifest-plugin": "^4.0.2"
     },
     "optionalDependencies": {
-        "fork-ts-checker-webpack-plugin": "^6.1.1",
+        "fork-ts-checker-webpack-plugin": "^7.0.0",
         "html-webpack-plugin": "^5.3.2",
         "less": "^4.1.1",
         "less-loader": "^10.0.1",
