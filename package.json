@@ -18,6 +18,9 @@
     "scripts": {
         "test": "jest"
     },
+    "engines": {
+        "node": ">= 14.0.0"
+    },
     "dependencies": {
         "babel-loader": "^8.0.5",
         "babel-preset-react-app": "^10.0.0",
