@@ -29,12 +29,13 @@ The first function you must call is `initialize` the will start off the
 generation of the config. You can pass an object into the function to
 customize your config.
 
-| Option      | Default  | Description                                                                                      |
-| ----------- | -------- | ------------------------------------------------------------------------------------------------ |
-| src_path    | ./src    | The base path for all of the assets                                                              |
-| dest_path   | ./dist   | The path where you compiled asses will be put                                                    |
-| public_path | /        | The path where you assets are going to be saved. This is used for the urls in the manifest files |
-| production  | NODE_ENV | This will not generally need to be set as it set from the node environment                       |
+| Option                  | Default   | Description                                                                                                                                                     |
+| ----------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| src_path                | ./src     | The base path for all of the assets                                                                                                                             |
+| dest_path               | ./dist    | The path where you compiled asses will be put                                                                                                                   |
+| public_path             | /         | The path where you assets are going to be saved. This is used for the urls in the manifest files                                                                |
+| production              | NODE_ENV  | This will not generally need to be set as it set from the node environment                                                                                      |
+| asset_inline_size_limit | 4 \* 1024 | The file size limit of inline assets. This will determine whether assets will be injected as a Base64-encoded string or a link to an external file will be used |
 
 ### Babel
 

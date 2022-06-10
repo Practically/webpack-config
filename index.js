@@ -42,6 +42,7 @@ const baseOptions = {
         historyApiFallback: true,
         port: 9000,
     },
+    asset_inline_size_limit: 4 * 1024,
 };
 
 baseOptions.entry_point = [`${baseOptions.src_path}/index.tsx`];
@@ -97,6 +98,11 @@ const initialize = _config => {
     loaders.push({
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
         type: 'asset',
+        parser: {
+            dataUrlCondition: {
+                maxSize: _config.asset_inline_size_limit,
+            },
+        },
     });
 
     /**
