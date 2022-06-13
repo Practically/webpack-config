@@ -1,3 +1,15 @@
+# [v1.0.0](https://github.com/Practically/webpack-config/compare/v0.0.4...v1.0.0) (2022-06-13)
+
+### Features
+
+* add config option to specify inline asset limit ([230cfd5](https://github.com/Practically/webpack-config/commit/230cfd51d6142586a7bc8b856b0976a9005add2e))
+* remove node 12 support and add node 18 ([91a8f35](https://github.com/Practically/webpack-config/commit/91a8f353292f9ebcec26fc1986cc6bab1e01f03a))
+
+
+### BREAKING CHANGES
+
+* The minimum supported node version is now node14
+
 ## [v0.0.4](https://github.com/Practically/webpack-config/compare/v0.0.3...v0.0.4) (2022-04-26)
 
 **NOTE:** This is a patch release only

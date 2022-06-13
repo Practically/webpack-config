@@ -1,6 +1,6 @@
 {
     "name": "@practically/webpack-config",
-    "version": "0.0.4",
+    "version": "1.0.0",
     "description": "Base webpack config",
     "main": "index.js",
     "author": {
