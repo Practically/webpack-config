@@ -106,17 +106,21 @@ yarn add -D typescript ts-loader fork-ts-checker-webpack-plugin
 
 With the html webpack plugin you can create a SPA and add inject all of you
 chunked scripts into the html. Simply call the `html` function passing in the
-path to your `index.html`
+path to your `index.html`.
+
+The second argument is optional, and is an object containing additional options
+to pass to `html-webpack-plugin`. For more info on what you can pass here, see
+the [list of available options](https://github.com/jantimon/html-webpack-plugin#options).
 
 ```js
 // webpack.config.js
-c.html('path/to/index.html');
+c.html('path/to/template.html', { filename: 'index.html' });
 ```
 
 The html plugin will also need to be added to your project
 
 ```bash
-yarn add -D html-webpack-plugin 
+yarn add -D html-webpack-plugin
 ```
 
 ## Scripts

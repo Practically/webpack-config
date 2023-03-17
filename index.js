@@ -1,5 +1,5 @@
 /**
- * Copyright 2021 Practically.io All rights reserved
+ * Copyright 2021-2023 Practically.io All rights reserved
  *
  * Use of this source is governed by a BSD-style
  * licence that can be found in the LICENCE file or at
@@ -323,12 +323,13 @@ const styles = () => {
     );
 };
 
-const html = template => {
+const html = (template, options = {}) => {
     const HtmlWebpackPlugin = require('html-webpack-plugin');
 
     let pluginOptions = {
         inject: true,
         template: template,
+        ...options,
     };
 
     if (config.production) {

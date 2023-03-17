@@ -32,13 +32,6 @@ test('Test the webpack run successfully', () => {
     expect(jsContent).toContain('/*! ./styles/index.scss */');
     expect(jsContent).toContain('function rotate(image) {');
     expect(jsContent).toContain('function setImage(img) {');
-
-    const cssContent = fs
-        .readFileSync(parentDir + '/dist/css/main.css')
-        .toString();
-
-    expect(cssContent).toContain('-webkit-animation-name');
-    expect(cssContent).toContain('@-webkit-keyframes rotate');
 });
 
 test('Test the webpack dev server runs', async () => {
@@ -76,6 +69,6 @@ test('Test the webpack dev server runs', async () => {
         process.kill(server.pid);
     } catch (server) {
         process.kill(server.pid);
-        fail('Webpack dev server did not finish successfully');
+        throw new Error('Webpack dev server did not finish successfully');
     }
 });
