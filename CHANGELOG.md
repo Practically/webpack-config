@@ -1,3 +1,9 @@
+# [v1.1.0](https://github.com/Practically/webpack-config/compare/v1.0.0...v1.1.0) (2023-03-17)
+
+### Features
+
+* pass html-webpack-plugin options to config builder ([e01adf7](https://github.com/Practically/webpack-config/commit/e01adf7eb8f70c63edbc262b2063ac13754287f8))
+
 # [v1.0.0](https://github.com/Practically/webpack-config/compare/v0.0.4...v1.0.0) (2022-06-13)
 
 ### Features
