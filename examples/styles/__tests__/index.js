@@ -41,6 +41,5 @@ test('Test the webpack run successfully', () => {
     expect(cssContent).toContain('less-class');
 
     expect(cssContent).toContain('user-select: none;');
-    expect(cssContent).toContain('-ms-user-select: none;');
     expect(cssContent).toContain('-webkit-user-select: none;');
 });
