@@ -4,7 +4,7 @@ jobs:
   commits:
     name: Commitlint
     runs-on: ubuntu-latest
-    container: registry.k1.zportal.co.uk/practically-oss/conventional-tools:1.x
+    container: practically/conventional-tools:1.x
     steps:
       - name: Checkout
         uses: actions/checkout@v3
